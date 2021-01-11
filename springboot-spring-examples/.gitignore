@@ -1,5 +1,3 @@
-### IntelliJ IDEA ###
-*.iws
+.idea
 *.iml
-*.ipr
 target

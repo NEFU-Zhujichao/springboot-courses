@@ -1,0 +1,4 @@
+GET http://localhost:8080/api/example06/admin
+Accept: application/json
+
+###

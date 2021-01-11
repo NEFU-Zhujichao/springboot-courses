@@ -16,6 +16,7 @@ public class UserService04 {
     private Map<String, User> create(){
         User u = new User();
         u.setUserName("chao");
+        //pwd: 123456
         u.setPassword("$2a$10$R454Ui75NX0R8CU9Y9E7GuYfho4ukaCj2blLGCYojyJ8FB2WDI19q");
         return Map.of("chao",u);
     }

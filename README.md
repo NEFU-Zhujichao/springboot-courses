@@ -1,2 +1,1 @@
-# springboot-courses
-springboot-examples
+# springboot-courses #

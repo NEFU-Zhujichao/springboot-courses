@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.http.HttpServletResponse;
+import java.security.KeyPairGenerator;
 import java.util.Map;
 import java.util.Optional;
 
@@ -23,7 +24,6 @@ import java.util.Optional;
 @RequestMapping("/api/")
 @Slf4j
 public class LoginController {
-
     @Value("${my.teacher}")
     private String roleTeacher;
     @Value("${my.student}")
@@ -44,6 +44,8 @@ public class LoginController {
         String auth = encrypt.encryptToken(token);
         response.setHeader(token.AUTHORIZATION,auth);
         String roleCode = user.getRole() == User.Role.TEACHER ? roleTeacher : roleStudent;
+        //生成密钥对
+        //KeyPairGenerator.getInstance("RSA").generateKeyPair();
         return Map.of("role", roleCode);
     }
 }

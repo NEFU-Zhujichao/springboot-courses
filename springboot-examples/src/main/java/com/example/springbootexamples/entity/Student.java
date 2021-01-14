@@ -13,7 +13,9 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    //级联增加和删除
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    //共用主键
     @MapsId
     private User user;
     @ManyToOne

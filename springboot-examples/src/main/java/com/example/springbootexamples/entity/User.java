@@ -18,6 +18,7 @@ public class User {
     private String name;
     @Column(unique = true)
     private Integer number;
+    //序列化忽略，反序列化不忽略
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
